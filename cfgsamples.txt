@@ -1,0 +1,100 @@
+////###########
+////# OPTIONS # D-OPTIMIZER CFG
+////###########
+////# GAME                                                [x] default // +- changed by this cfg   
+dota_player_units_auto_attack                        0 // [0] Auto Attack
+dota_player_units_auto_attack_after_spell            1 // [1] Auto Attack After Spell
+dota_player_auto_purchase_items                      0 // [0] Auto Purchase Items
+dota_player_add_summoned_to_selection                1 //+[0] Auto Select Summoned Units
+dota_ability_quick_cast                              1 //+[0] Double Tap Ability to Self Cast
+dota_player_multipler_orders                         1 //+[0] Unified Unit Orders
+dota_player_teleport_requires_halt                   1 //+[0] Teleport Requires Stop
+dota_show_hero_finder                                0 //-[1] Holding ALT Highlights Hero
+dota_always_show_player_names                        0 // [0] Show Player Names Over Health bar
+dota_hud_healthbar_number                            1 // [1] Show Hit points Over Player Health bar
+dota_shop_force_hotkeys                              0 // [0] Shop Always Uses Hot keys
+dota_spectator_use_broadcaster_stats_panel           1 // [1] Use Broadcaster Stats
+dota_hud_colorblind                                  0 // [0] Color Blind Mode
+dota_settings_quick_target_attack                    1 //+[0] Quick Attack
+dota_settings_targeted_attack_move                   1 //+[0] Smart Attack Move
+////# MINIMAP
+dota_minimap_simple_colors                           0 // [0] Use Simple Colors in Minimap
+dota_minimap_hide_background                         0 // [0] Hide Minimap Background
+dota_minimap_show_hero_icon                          1 // [1] Draw Hero Icons in Minimap
+dota_minimap_always_draw_hero_icons                  1 //-[0] Names/Icons Always in Minimap
+dota_hud_flip                                        0 // [0] Draw Minimap on Right
+////# CAMERA
+dota_camera_reverse                                  0 // [0] Reverse Camera Grip
+dota_camera_edgemove                                 1 // [1] Edge Pan
+dota_screen_shake                                    0 //-[1] Enable Screen Shake
+dota_reset_camera_on_spawn                           0 //-[1] Move Camera on Respawn
+dota_camera_deatheffect                              0 //-[1] Camera Color-shift when Dead (forced by Valve)
+dota_camera_dotatv_smooth_drag                       1 //+[0] Smooth drag Camera when Spectating
+dota_camera_speed                                 6000 //+[3000] Camera Speed [AveYo: Closer to Dota1 feeling, also makes the game feel less choppy on low fps]
+dota_camera_accelerate                              50 //+[49] Camera Deceleration
+////# PROFILE
+//only toggleable in client (as it should)             // [0] Expose Public Match Data
+dota_ignore_nonfriend_invites                        0 // [0] Block party invites from non-friends
+dota_ignore_nonfriend_guild_invites                  0 // [0] Block guild invites from non-friends BROKEN ATM (WHOLE GUILD SYSTEM) 
+dota_rp_hide_party_unless_open                       1 //+[0] Hide my party status when not in an Open Party
+dota_open_party_manual_accept_invites                1 //+[0] Don't auto-accept party invites while in an Open Party
+dota_trading_show_requests_from                      1 // [1] Trade invites from: 1=Guildmates and Friends, 0=Friends Only, 2=Anyone
+////# NETWORK
+cl_cmdrate                                          15 // [30] Network Quality A    Low=15, High=30
+cl_updaterate                                       15 // [30] Network Quality B    Low=15, High=30
+dota_hud_netgraph                                    0 // [0] Display Network Information
+////# CHAT
+dota_chat_enable_whispers                            1 // [1] Display Steam messages as whispers
+dota_join_regional_chat_channel                      0 //-[1] Join regional chat channel on startup
+////# APPLICATION
+dota_activate_window_on_match_found                  1 //+[0] Bring Dota to the foreground when match found
+con_enable                                           1 //+[0] Enable console
+dota_armory_automatically_add_new_item_to_collection 0 // [0] Add New Items to Collection Tab
+
+////#########
+////# VIDEO # D-OPTIMIZER CFG
+////#########                                  
+////# RENDERING_ADVANCED_SETTINGS                         basic settings:     Fastest  <     >  BestLooking  AveYo's notes:
+dota_portrait_animate                                1 // Animate portrait       0     1     1     1          ON - Slight fps impact but well worth having for the atmosphere
+r_deferred_additive_pass                             0 // Additive light pass    0     1     1     1         OFF - High fps impact so you should prefer shadows over this
+r_deferred_simple_light                              1 // World lighting         0     1     1     1          ON - Slight fps impact and well worth having since it affects not only tree lights, but also some immortal effects
+r_ssao                                               0 // Ambient occlusion      0     0     1     1         OFF - Very high fps impact that only makes sense when everything else is on, for the added shadows realism
+dota_ambient_creatures                               0 // Ambient creatures      0     0     0     1         OFF - High fps impact so you should prefer shadows over this, can also make a mess when combined with weather effects
+r_dota_normal_maps                                   1 // Normal Maps            0     0     1     1          ON - Slight fps impact but this technique is so '03 and is worth having for the added terrain realism (bumps) 
+r_dashboard_render_quality                           0 // High Quality Dashbo... 0     0     1     1         OFF - High fps impact only when in menu, the slightly animated background is not really worth it
+                                                                                                    
+r_dota_fxaa                                          0 // Anti-Aliasing          0     0     1     1         OFF - Very high fps impact but does get rid of rough edges... 
+r_deferred_specular                                  1 // Specular               0     0     1     1          ON - Hight fps impact, but keep on at all costs, terrain looks flat and less bright without it
+r_deferred_specular_bloom                            0 // Specular bloom         0     0     1     1         OFF - High fps impact, so you should prefer shadows over this
+dota_cheap_water                                     1 // High Quality Water     0     0     0     1         OFF - Very high fps impact that only makes sense when everything else is on (still a retard cvar/gui name inversion)
+r_deferred_height_fog                                0 // Atmospheric Fog        0     1     1     1         OFF - High fps impact for onboard GPUs while you won't even notice it missing
+mat_vsync                                            0 // VSync                  0     0     0     0         OFF - Very high fps impact and higher input lag, don't enable if you can't get stable fps over your monitor refresh rate
+r_texture_stream_mip_bias                            1 // Texture Quality A      2     1     0     0         MED - This impacts the (gpu) memory more, so you should not have the need to go lower than medium (2=Low 1=Med 0=High)
+r_texturefilteringquality                            1 // Texture Quality B      0     1     3     3         MED - Slight fps impact but well worth having a higher anisotropic filtered textures   (0=Very Low 1=Low 2=Med 3=High)                                            
+cl_globallight_shadow_mode                           1 // Shadow Quality         0    *1     2     2         MED - Sacrifice anything else, without shadows the game looks worst than warcraft3                (0=Low 1=Med 2=High)
+mat_viewportscale                                 0.8f // Render Quality       0.6f  0.8f  1.0f  1.0f        0.8 - Slight fps impact, anything less than 0.8 makes everything too blurry                   (from 0.4=40 to 1.0=100)
+
+////#########
+////# AUDIO # D-OPTIMIZER CFG
+////######### 
+////# VOLUME
+volume                                             0.8 //-[1.0] Master Volume
+snd_gamevolume                                     0.4 //-[1.0] Game Volume
+snd_musicvolume                                    0.2 //-[1.0] Music Volume
+snd_voipvolume                                     1.0 //-[1.0] Voice Volume
+snd_gamevoicevolume                                0.2 //-[1.0] Unit Speech Volume
+dota_speech_level                                    2 // [2] Unit Speech [AveYo: 0=Off 1=Events 2=All]
+////# AUDIO
+speaker_config                                       1 //-[-1] Speakers [AveYo: 1=headphones, 2=stereo, 4=4 surround, 5=5.1 surround, 7=7.1 surround]
+snd_mute_losefocus                                   0 // [0] Play Sound in Desktop
+chat_sound                                           0 // [0] Chat Message Sound
+dota_mute_cobroadcasters                             0 // [0] Mute Co-Broadcasters
+dsp_slow_cpu                                         1 //+[0] High Quality Audio [AveYo: Low=1 High=0]
+closecaption                                         0 // [0] Use Captions
+snd_autodetect_latency                               0 // [0] Autodetect Audio Latency
+////# VOICE
+bind H                           +iv_voicerecord_party // [ ] Voice (party)
+bind G                                    +voicerecord // [G] Voice (team)
+voice_vox                                            0 // [0] Enable Open Mic [AveYo: Party=1 Team=2]
+voice_threshold                                  3200f // [4000] Open Mic Threshold  
+voice_always_sample_mic                              0 // [0] Streamlined Push To Talk (only enable if using in-game voice system results in fps loss)
